@@ -1,0 +1,198 @@
+{
+  "id": "9703b440-c7c6-4459-9b9b-ce56ba949bb6",
+  "version": "1.1",
+  "name": "Untitled Project",
+  "url": "https://www.smiles.com.br",
+  "tests": [{
+    "id": "4f984298-30a1-4bc1-bf9e-353bfa9f1f68",
+    "name": "Untitled",
+    "commands": [{
+      "id": "c115faf8-9330-4b8f-b9af-79e1eb12fcd4",
+      "comment": "",
+      "command": "open",
+      "target": "/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8856b44d-befc-4ec4-9774-478b506d14af",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=showModal",
+      "targets": [
+        ["id=showModal", "id"],
+        ["linkText=Entrar", "linkText"],
+        ["css=#showModal", "css"],
+        ["xpath=(//a[contains(text(),'Entrar')])[2]", "xpath:link"],
+        ["xpath=//a[@id='showModal']", "xpath:attributes"],
+        ["xpath=//div[@id='loginArea']/div/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0);')])[2]", "xpath:href"],
+        ["xpath=//div/div/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97f252ff-d16f-4a59-bc97-afe4a51ca316",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=showModal",
+      "targets": [
+        ["id=showModal", "id"],
+        ["linkText=Entrar", "linkText"],
+        ["css=#showModal", "css"],
+        ["xpath=(//a[contains(text(),'Entrar')])[2]", "xpath:link"],
+        ["xpath=//a[@id='showModal']", "xpath:attributes"],
+        ["xpath=//div[@id='loginArea']/div/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0);')])[2]", "xpath:href"],
+        ["xpath=//div/div/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb0b91db-dd08-4b83-86dd-8796cab72216",
+      "comment": "",
+      "command": "click",
+      "target": "id=showModal",
+      "targets": [
+        ["id=showModal", "id"],
+        ["linkText=Entrar", "linkText"],
+        ["css=#showModal", "css"],
+        ["xpath=(//a[contains(text(),'Entrar')])[2]", "xpath:link"],
+        ["xpath=//a[@id='showModal']", "xpath:attributes"],
+        ["xpath=//div[@id='loginArea']/div/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0);')])[2]", "xpath:href"],
+        ["xpath=//div/div/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9d66c65-2037-4043-bbfe-3ace05ac2173",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=onesignal-popover-cancel-button",
+      "targets": [
+        ["id=onesignal-popover-cancel-button", "id"],
+        ["css=#onesignal-popover-cancel-button", "css"],
+        ["xpath=//button[@id='onesignal-popover-cancel-button']", "xpath:attributes"],
+        ["xpath=//div[@id='normal-popover']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[54]/div/div/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1c711ff-07a6-465c-9415-a9f186c05ee6",
+      "comment": "",
+      "command": "click",
+      "target": "id=onesignal-popover-cancel-button",
+      "targets": [
+        ["id=onesignal-popover-cancel-button", "id"],
+        ["css=#onesignal-popover-cancel-button", "css"],
+        ["xpath=//button[@id='onesignal-popover-cancel-button']", "xpath:attributes"],
+        ["xpath=//div[@id='normal-popover']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[54]/div/div/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4dd5503-368c-4282-b9fc-adef8bd15100",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=onesignal-popover-cancel-button",
+      "targets": [
+        ["id=onesignal-popover-cancel-button", "id"],
+        ["css=#onesignal-popover-cancel-button", "css"],
+        ["xpath=//button[@id='onesignal-popover-cancel-button']", "xpath:attributes"],
+        ["xpath=//div[@id='normal-popover']/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[54]/div/div/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b265bb7a-4a37-48e0-8484-5d3d7801348f",
+      "comment": "",
+      "command": "click",
+      "target": "id=_smilesloginportlet_WAR_smilesloginportlet_login_idscreenName",
+      "targets": [
+        ["id=_smilesloginportlet_WAR_smilesloginportlet_login_idscreenName", "id"],
+        ["name=_smilesloginportlet_WAR_smilesloginportlet_screenName", "name"],
+        ["css=#_smilesloginportlet_WAR_smilesloginportlet_login_idscreenName", "css"],
+        ["xpath=//input[@id='_smilesloginportlet_WAR_smilesloginportlet_login_idscreenName']", "xpath:attributes"],
+        ["xpath=//form[@id='_smilesloginportlet_WAR_smilesloginportlet_loginForm']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[22]/div[2]/div/form/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23676f0f-317f-4aa6-99e8-6d34f311eeb0",
+      "comment": "",
+      "command": "type",
+      "target": "id=_smilesloginportlet_WAR_smilesloginportlet_login_idscreenName",
+      "targets": [
+        ["id=_smilesloginportlet_WAR_smilesloginportlet_login_idscreenName", "id"],
+        ["name=_smilesloginportlet_WAR_smilesloginportlet_screenName", "name"],
+        ["css=#_smilesloginportlet_WAR_smilesloginportlet_login_idscreenName", "css"],
+        ["xpath=//input[@id='_smilesloginportlet_WAR_smilesloginportlet_login_idscreenName']", "xpath:attributes"],
+        ["xpath=//form[@id='_smilesloginportlet_WAR_smilesloginportlet_loginForm']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[22]/div[2]/div/form/div/div/div/input", "xpath:position"]
+      ],
+      "value": "481870093"
+    }, {
+      "id": "5c6ab36b-8eaa-4f5d-ad9b-b22b48cb0d24",
+      "comment": "",
+      "command": "login",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "196d45e1-55bf-4c3e-a018-042e9f4c8cd0",
+      "comment": "",
+      "command": "click",
+      "target": "id=_smilesloginportlet_WAR_smilesloginportlet_password",
+      "targets": [
+        ["id=_smilesloginportlet_WAR_smilesloginportlet_password", "id"],
+        ["name=_smilesloginportlet_WAR_smilesloginportlet_password", "name"],
+        ["css=#_smilesloginportlet_WAR_smilesloginportlet_password", "css"],
+        ["xpath=//input[@id='_smilesloginportlet_WAR_smilesloginportlet_password']", "xpath:attributes"],
+        ["xpath=//form[@id='_smilesloginportlet_WAR_smilesloginportlet_loginForm']/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[22]/div[2]/div/form/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "249ab0f6-e22e-4456-a346-25132203ab2d",
+      "comment": "",
+      "command": "type",
+      "target": "id=_smilesloginportlet_WAR_smilesloginportlet_password",
+      "targets": [
+        ["id=_smilesloginportlet_WAR_smilesloginportlet_password", "id"],
+        ["name=_smilesloginportlet_WAR_smilesloginportlet_password", "name"],
+        ["css=#_smilesloginportlet_WAR_smilesloginportlet_password", "css"],
+        ["xpath=//input[@id='_smilesloginportlet_WAR_smilesloginportlet_password']", "xpath:attributes"],
+        ["xpath=//form[@id='_smilesloginportlet_WAR_smilesloginportlet_loginForm']/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[22]/div[2]/div/form/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "1010"
+    }, {
+      "id": "a118fd09-afe5-4049-b67f-f29f724df79f",
+      "comment": "",
+      "command": "senha",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe3eeaf0-8a74-4bdd-a41b-f081d0942876",
+      "comment": "",
+      "command": "click",
+      "target": "id=buttonSubmitLogin",
+      "targets": [
+        ["id=buttonSubmitLogin", "id"],
+        ["css=#buttonSubmitLogin", "css"],
+        ["xpath=//button[@id='buttonSubmitLogin']", "xpath:attributes"],
+        ["xpath=//form[@id='_smilesloginportlet_WAR_smilesloginportlet_loginForm']/div/button", "xpath:idRelative"],
+        ["xpath=//div[22]/div[2]/div/form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "6f6b08ed-7a42-409e-878c-b1ffc8ece550",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4f984298-30a1-4bc1-bf9e-353bfa9f1f68"]
+  }],
+  "urls": ["https://www.smiles.com.br/"],
+  "plugins": []
+}

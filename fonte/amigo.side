@@ -1,20 +1,20 @@
 {
-  "id": "57577eb7-c21f-4fb7-b5d8-c30a9c3e1529",
+  "id": "3310e23f-354a-4df1-96f2-2f84131e80b6",
   "version": "1.1",
   "name": "Untitled Project",
   "url": "https://www.pontosamigo.com.br",
   "tests": [{
-    "id": "8ce95c27-e9ef-4d86-a767-d34bc35503cf",
+    "id": "5f8554f4-b932-44f4-be9a-713c5cb17c8a",
     "name": "Untitled",
     "commands": [{
-      "id": "3b07f369-5eca-4ef3-8403-752a4f32c984",
+      "id": "9dba5295-fe77-4eed-96c6-f18a838e7e62",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
       "value": ""
     }, {
-      "id": "cdaed163-05f7-4d5b-8f4c-aebdcaaeb8fa",
+      "id": "716416fc-0dd1-4bc5-8f9c-0de22799e626",
       "comment": "",
       "command": "click",
       "target": "id=input-login",
@@ -27,7 +27,7 @@
       ],
       "value": ""
     }, {
-      "id": "8f9c9138-981e-483f-aba3-53034939e861",
+      "id": "807c3032-2484-49d2-9db3-b7ef796f0b00",
       "comment": "",
       "command": "type",
       "target": "id=input-login",
@@ -40,14 +40,7 @@
       ],
       "value": "040.774.690-07"
     }, {
-      "id": "9e63a4aa-69f5-4e1b-ba7d-af4bda0b5b57",
-      "comment": "",
-      "command": "login",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f352fd0b-058b-4695-8ec2-aa68e8af5712",
+      "id": "af0b4a24-fb35-4e67-b6be-880f9685adb6",
       "comment": "",
       "command": "click",
       "target": "id=input-password",
@@ -60,7 +53,7 @@
       ],
       "value": ""
     }, {
-      "id": "d0596c44-ef98-4233-af2c-1430979d8b5d",
+      "id": "0f5623bf-6e5a-44ed-ba19-284cbe7e5860",
       "comment": "",
       "command": "type",
       "target": "id=input-password",
@@ -73,14 +66,7 @@
       ],
       "value": "986400190Jj?"
     }, {
-      "id": "21c834fb-a917-4a8c-bb5f-238c30de9442",
-      "comment": "",
-      "command": "senha",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f9ef2c9a-b9ba-456c-83f5-d4e1cf27406e",
+      "id": "cb4db461-120e-4543-b897-7414188b9788",
       "comment": "",
       "command": "click",
       "target": "xpath=//button[@type='button']",
@@ -91,7 +77,7 @@
       ],
       "value": ""
     }, {
-      "id": "59ba1437-04b0-4996-b1c8-3e47e4f9afbf",
+      "id": "e5ef2654-7b56-441a-b6d0-f86cd1061346",
       "comment": "",
       "command": "mouseOver",
       "target": "xpath=//button[@type='button']",
@@ -99,53 +85,17 @@
         ["xpath=//button[@type='button']", "xpath:attributes"],
         ["xpath=//section[@id='login-content']/button", "xpath:idRelative"],
         ["xpath=//button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "fde4e855-6e6a-4966-8267-5a2100926117",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=(VER CONTA)",
-      "targets": [
-        ["linkText=(VER CONTA)", "linkText"],
-        ["css=p > a", "css"],
-        ["xpath=//a[contains(text(),'(VER CONTA)')]", "xpath:link"],
-        ["xpath=//section[@id='logado-header']/p/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, '/minha-conta')]", "xpath:href"],
-        ["xpath=//p/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "197d172f-15cf-4555-8d6a-4b91574c4969",
-      "comment": "",
-      "command": "click",
-      "target": "css=#modal > div.acc-modal-common.modal-cadastre > div.acc-modal-close.clearfix > button.pull-right > img",
-      "targets": [
-        ["css=#modal > div.acc-modal-common.modal-cadastre > div.acc-modal-close.clearfix > button.pull-right > img", "css"],
-        ["xpath=//div[@id='modal']/div/div/button/img", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div/div/div/div/button/img", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "6386919a-b43d-4959-8961-cd5d079cdf88",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=#modal > div.acc-modal-common.modal-cadastre > div.acc-modal-close.clearfix > button.pull-right > img",
-      "targets": [
-        ["css=#modal > div.acc-modal-common.modal-cadastre > div.acc-modal-close.clearfix > button.pull-right > img", "css"],
-        ["xpath=//div[@id='modal']/div/div/button/img", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div/div/div/div/button/img", "xpath:position"]
       ],
       "value": ""
     }]
   }],
   "suites": [{
-    "id": "f78bd71a-e8ee-4e44-8a8a-4889053ad45d",
+    "id": "b5885030-6ee5-453e-b331-49b55cd9deba",
     "name": "Default Suite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["8ce95c27-e9ef-4d86-a767-d34bc35503cf"]
+    "tests": ["5f8554f4-b932-44f4-be9a-713c5cb17c8a"]
   }],
   "urls": ["https://www.pontosamigo.com.br/"],
   "plugins": []

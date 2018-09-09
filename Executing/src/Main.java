@@ -1,5 +1,7 @@
+
 import java.io.BufferedReader;
 import java.io.FileReader;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,147 +11,153 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Main {
-	private WebDriver driver;
-	private String login = "null";
-	private String senha = "null";
+	private static WebDriver driver;
+	private static String login = "";
+	private static String senha = "";
+	private static int waitTime = 5;
 
 	public static void main(String[] args) {
-
-	}
-
-	public void doIt() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\joao\\Downloads\\testes\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Projects\\pocEspelho\\pocEspelho\\fonte\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		String id;
-		String value;
+
 		try {
 			BufferedReader reader = new BufferedReader(
-					new FileReader("C:\\Users\\joao\\Downloads\\testes\\Untitled Project2.side"));
+					new FileReader("C:\\Projects\\pocEspelho\\pocEspelho\\fonte\\statsTest.txt"));
 			String line;
-			int i = 0;
 			while ((line = reader.readLine()) != null) {
-				// line = line.replace("\"", "�");
 				System.out.println("linha: " + line);
 
-				if (line.contains("url")) {
-					int statIndex = line.indexOf("h");
-					int endIndex = line.indexOf(",") - 1;
-					id = line.substring(statIndex, endIndex);
-					changePage(id);
-					System.out.println("encontrou url: " + id);
-
-				} else if (line.contains("\"command\": \"click\",")) {
+				if (line.contentEquals("url")) {
 					line = reader.readLine();
-					int statIndex = line.indexOf("id=") + 3;
-					int endIndex = line.indexOf(",") - 1;
-					id = line.substring(statIndex, endIndex);
-					click(id);
-					System.out.println("clickou em: " + id);
+					System.out.println("linha: " + line);
+					changePage(line);
 
-				} else if (line.contains("\"command\": \"type\",")) {
-					reader.mark(i);
+				} else if (line.contentEquals("click")) {
+					String id;
 					line = reader.readLine();
-					while (line.contains("\"command\":") == false) {
-						line = reader.readLine();
-					}
-					if (line.contains("login")) {
-						reader.reset();
-						line = reader.readLine();
-						int semi = line.indexOf("id=");
-						int statIndex = semi + 3;
-						int endIndex = line.indexOf(",") - 1;
-						id = line.substring(statIndex, endIndex);
-						System.out.println("USOU LOGIIIIIIIIIIIIIIIIIIIIIIIIIIIIIN");
-						type(id, login);
+					System.out.println("linha: " + line);
+					id = line;
+					line = reader.readLine();
+					System.out.println("linha: " + line);
+					click(id, line);
 
-					} else if (line.contains("senha")) {
-						reader.reset();
-						line = reader.readLine();
-						int semi = line.indexOf("id=");
-						int statIndex = semi + 3;
-						int endIndex = line.indexOf(",") - 1;
-						id = line.substring(statIndex, endIndex);
-						System.out.println("USOU SENHAAAAAAAAAAAAAAAAAAAAAA");
-						type(id, senha);
-
-					} else {
-						reader.reset();
-						line = reader.readLine();
-						int semi = line.indexOf("id=");
-						int statIndex = semi + 3;
-						int endIndex = line.indexOf(",") - 1;
-						id = line.substring(statIndex, endIndex);
-						System.out.println("clickou em: " + id);
-
-						for (int j = 0; j < 200; j++) {
-							if (line.contains("\"value\":")) {
-								System.out.println("line ta assim " + line);
-								break;
-							} else {
-								line = reader.readLine();
-							}
+				} else if (line.contentEquals("type")) {
+					String id, value, xpath;
+					line = reader.readLine();
+					id = line;
+					System.out.println("linha: " + line);
+					line = reader.readLine();
+					xpath = line;
+					System.out.println("linha: " + line);
+					line = reader.readLine();
+					if (line.contentEquals("LOGIN") | line.contentEquals("PASSWORD")) {
+						if(line.contentEquals("LOGIN")) {
+							complexType(id, "LOGIN", xpath);
+						}else {
+							complexType(id, "PASSWORD", xpath);
 						}
-						System.out.println("line ta assim " + line);
-						statIndex = line.indexOf("\"value\": \"") + 10;
-						int tam = line.length();
-						tam = tam - 1;
-						value = line.substring(statIndex, tam);
-						value.replace("\"", "");
-						System.out.println("digitou : " + value);
-						type(id, value);
+						
+					} else {
+						value = line;
+						System.out.println("linha: " + line);
+						simpleType(id, value, xpath);
 					}
-
-				} else if (!line.contains("\"comment\": \"\",")) {
+				} else if (line.contentEquals("moveMouse")) {
+					String id, xpath;
 					line = reader.readLine();
-					if (line.contains("\"command\": \"mouseOver\",")) {
-						line = reader.readLine();
-						int statIndex = line.indexOf("id=") + 3;
-						int endIndex = line.indexOf(",") - 1;
-						id = line.substring(statIndex, endIndex);
-						moveMouse(id);
-						System.out.println("moveu mouse sobre: " + id);
-					}
-
+					System.out.println("linha: " + line);
+					id = line;
+					xpath = reader.readLine();					
+					System.out.println("linha: " + line);
+					moveMouse(id, xpath);
 				}
-				i++;
 			}
 			reader.close();
 			System.out.println("concluido");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 
-	private void type(String id, String value) {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
-		System.out.println("metodo de escrever esta escrevendo:   " + value);
-		System.out.println("no campo : " + id);
-		driver.findElement(By.id(id)).sendKeys(value);
+	private static void complexType(String id, String type, String xpath) {
+		try {
+			if(type.contentEquals("LOGIN")) {
+				WebDriverWait wait = new WebDriverWait(driver, waitTime);
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+				driver.findElement(By.id(id)).sendKeys(login);
+			}else {
+				WebDriverWait wait = new WebDriverWait(driver, waitTime);
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+				driver.findElement(By.id(id)).sendKeys(senha);
+			}
+		}catch (Exception e) {
+			if(type.contentEquals("LOGIN")) {
+				WebDriverWait wait = new WebDriverWait(driver, waitTime);
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+				driver.findElement(By.id(id)).sendKeys(login);
+			}else {
+				WebDriverWait wait = new WebDriverWait(driver, waitTime);
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+				driver.findElement(By.xpath(xpath)).sendKeys(senha);
+			}
+		}
 	}
 
-	private void changePage(String url) {
+	private static void simpleType(String id, String value, String xpath) {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, waitTime);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+			driver.findElement(By.id(id)).sendKeys(value);
+		}catch (Exception e) {
+			WebDriverWait wait = new WebDriverWait(driver, waitTime);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(id)));
+			driver.findElement(By.id(id)).sendKeys(value);
+		}
+		
+	}
+
+	private static void changePage(String url) {
 		driver.get(url);
 	}
 
-	private void click(String id) {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
-		WebElement element = driver.findElement(By.id(id));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(element).click().build().perform();
-
-		System.out.println("metodo de clicar, estaclicando em :   " + id);
-		// driver.findElement(By.id(id)).click();
+	private static void click(String id, String xpath) {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, waitTime);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+			WebElement element = driver.findElement(By.id(id));
+			Actions actions = new Actions(driver);
+			actions.moveToElement(element).click().build().perform();
+		}catch (Exception e) {
+			try {
+				System.out.println("nao conseguiu");
+				WebDriverWait wait = new WebDriverWait(driver, waitTime);
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+				WebElement element = driver.findElement(By.xpath(xpath));
+				Actions actions = new Actions(driver);
+				actions.moveToElement(element).click().build().perform();
+			}catch (Exception e2) {
+				System.out.println("nao conseguiu de novo");
+			}
+			
+		}
+		
 	}
 
-	private void moveMouse(String id) {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
-		WebElement element = driver.findElement(By.id(id));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(element).moveToElement(element);
+	private static void moveMouse(String id, String xpath) {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, waitTime);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+			WebElement element = driver.findElement(By.id(id));
+			Actions actions = new Actions(driver);
+			actions.moveToElement(element).moveToElement(element);
+		}catch (Exception e) {
+			WebDriverWait wait = new WebDriverWait(driver, waitTime);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+			WebElement element = driver.findElement(By.xpath(xpath));
+			Actions actions = new Actions(driver);
+			actions.moveToElement(element).moveToElement(element);
+		}
+		
 	}
 }

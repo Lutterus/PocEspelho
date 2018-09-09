@@ -1,0 +1,165 @@
+{
+  "id": "74ff3d49-2a37-4810-a6c9-c37164ff75a2",
+  "version": "1.1",
+  "name": "Untitled Project",
+  "url": "https://www.voeazul.com.br",
+  "tests": [{
+    "id": "2683b42c-0ed7-4b36-8396-3592d62616f4",
+    "name": "Untitled",
+    "commands": [{
+      "id": "8a804885-15ac-4d26-8efd-c93e1c4ccb00",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0e41c43-b22c-49d4-851f-f7c6b438f3b5",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-username",
+      "targets": [
+        ["id=login-username", "id"],
+        ["name=login", "name"],
+        ["css=#login-username", "css"],
+        ["xpath=//input[@id='login-username']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/fieldset/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8426769-da7b-43ae-ad1f-4fbf956e6921",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-username",
+      "targets": [
+        ["id=login-username", "id"],
+        ["name=login", "name"],
+        ["css=#login-username", "css"],
+        ["xpath=//input[@id='login-username']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/fieldset/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0477973-bf82-4f96-a6f3-0dfe433f47b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-username",
+      "targets": [
+        ["id=login-username", "id"],
+        ["name=login", "name"],
+        ["css=#login-username", "css"],
+        ["xpath=//input[@id='login-username']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/fieldset/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "04077469007"
+    }, {
+      "id": "2ca77ee7-c63f-46c1-80ff-4a4bbad3213a",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input[name=\"password\"]", "css"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/fieldset/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98149f9f-5c12-4151-be79-732bb8db7524",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input[name=\"password\"]", "css"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/fieldset/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "986400190Jj"
+    }, {
+      "id": "35a1a960-37cf-42c6-b7fb-114e65ba3313",
+      "comment": "",
+      "command": "click",
+      "target": "css=span.checkbox-1",
+      "targets": [
+        ["css=span.checkbox-1", "css"],
+        ["xpath=//fieldset[@id='login-options']/div[2]/label/span", "xpath:idRelative"],
+        ["xpath=//label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "449d5cc1-1b9c-4d52-ad78-9363728c469b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//form[@id='login']/fieldset/div[3]/button",
+      "targets": [
+        ["xpath=//form[@id='login']/fieldset/div[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1eaa170d-2ae0-4303-be6c-4970abb0cf58",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=div.menu-0003__arrow",
+      "targets": [
+        ["css=div.menu-0003__arrow", "css"],
+        ["xpath=//div[@id='menu-0003']/div/button/div[3]", "xpath:idRelative"],
+        ["xpath=//button/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "deddd720-23af-4d30-aa4d-34aa57529f4b",
+      "comment": "",
+      "command": "click",
+      "target": "css=div.menu-0003__arrow",
+      "targets": [
+        ["css=div.menu-0003__arrow", "css"],
+        ["xpath=//div[@id='menu-0003']/div/button/div[3]", "xpath:idRelative"],
+        ["xpath=//button/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abc6928f-2168-42de-81b3-ce0a081a8dc6",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=div.menu-0003__arrow",
+      "targets": [
+        ["css=div.menu-0003__arrow", "css"],
+        ["xpath=//div[@id='menu-0003']/div/button/div[3]", "xpath:idRelative"],
+        ["xpath=//button/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d131da05-2410-4522-84c0-ad19f47a7523",
+      "comment": "",
+      "command": "click",
+      "target": "id=logout",
+      "targets": [
+        ["id=logout", "id"],
+        ["linkText=Sair", "linkText"],
+        ["css=#logout", "css"],
+        ["xpath=//a[@id='logout']", "xpath:attributes"],
+        ["xpath=//div[@id='menu-0003']/div[2]/ul/li[3]/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/home')])[7]", "xpath:href"],
+        ["xpath=//li[3]/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "6a84425f-dccb-447a-b841-3afe319e694f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2683b42c-0ed7-4b36-8396-3592d62616f4"]
+  }],
+  "urls": ["https://www.voeazul.com.br/"],
+  "plugins": []
+}

@@ -1,0 +1,171 @@
+{
+  "id": "fb69bbe6-f8d5-4991-ab0a-72cf519dc92a",
+  "version": "1.1",
+  "name": "Untitled Project",
+  "url": "http://www.pontoslivelo.com.br",
+  "tests": [{
+    "id": "511ab25f-7b4a-4a1e-a354-75157a383bc0",
+    "name": "Untitled",
+    "commands": [{
+      "id": "6db0f7bb-46f0-4173-86e2-3c3425f75d84",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7afdacd0-b322-47f3-9e30-b7efce02bab2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//a[contains(text(),'Entrar')])[2]",
+      "targets": [
+        ["xpath=(//a[contains(text(),'Entrar')])[2]", "xpath:link"],
+        ["xpath=//div[@id='divUserDesk']/article/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/secure/minha-conta/login')])[7]", "xpath:href"],
+        ["xpath=//div[4]/article/p[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d00b6343-5fd1-4fcf-9903-04e212c0262d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,100)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71340d75-8097-4d2f-bb34-7a03409caf38",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.shoppush-prompt-btn.shoppush-disallow-btn",
+      "targets": [
+        ["css=button.shoppush-prompt-btn.shoppush-disallow-btn", "css"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='shopback-5a5ca24082b21c019777dd8c']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebdcaada-aca2-408e-9b2b-432f2944f61a",
+      "comment": "",
+      "command": "click",
+      "target": "id=cpf",
+      "targets": [
+        ["id=cpf", "id"],
+        ["name=cpf", "name"],
+        ["css=#cpf", "css"],
+        ["xpath=//input[@id='cpf']", "xpath:attributes"],
+        ["xpath=//div[@id='div-inputField']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ccc65aef-894b-4d2e-8a20-c4a7f344404e",
+      "comment": "",
+      "command": "type",
+      "target": "id=cpf",
+      "targets": [
+        ["id=cpf", "id"],
+        ["name=cpf", "name"],
+        ["css=#cpf", "css"],
+        ["xpath=//input[@id='cpf']", "xpath:attributes"],
+        ["xpath=//div[@id='div-inputField']/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "040.774.690-07"
+    }, {
+      "id": "c6e663fd-0975-430f-b473-8c6b9fcd540a",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-continue",
+      "targets": [
+        ["id=btn-continue", "id"],
+        ["name=rBtn", "name"],
+        ["css=#btn-continue", "css"],
+        ["xpath=//button[@id='btn-continue']", "xpath:attributes"],
+        ["xpath=//form[@id='new-activate-cpf']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd2c50c2-abaa-430e-80b0-4cc20c3590c7",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=(//div[@id='div-inputField']/input)[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "315e3b99-4565-4090-b77a-98a73a17e8f6",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=(//div[@id='div-inputField']/input)[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/form/div[2]/input", "xpath:position"]
+      ],
+      "value": "986419"
+    }, {
+      "id": "ff961467-5327-459c-aa9d-e5d33c213433",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-continue-login",
+      "targets": [
+        ["id=btn-continue-login", "id"],
+        ["name=rBtn", "name"],
+        ["css=#btn-continue-login", "css"],
+        ["xpath=//button[@id='btn-continue-login']", "xpath:attributes"],
+        ["xpath=//form[@id='new-activate-login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a8e06f5-9a0d-47db-b997-4ab91feddc20",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Perfil",
+      "targets": [
+        ["linkText=Perfil", "linkText"],
+        ["css=a.dashboardLeftNav", "css"],
+        ["xpath=//a[contains(text(),'Perfil')]", "xpath:link"],
+        ["xpath=//li[@id='imgProfile']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/secure/minha-conta/editar')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "69fd00f8-fd15-43aa-a108-908f54dae5c7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sair",
+      "targets": [
+        ["linkText=Sair", "linkText"],
+        ["css=a.signout", "css"],
+        ["xpath=//a[contains(text(),'Sair')]", "xpath:link"],
+        ["xpath=//li[@id='imgLogout']/form/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//form/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f82c80c3-4742-4f68-bc43-38bd2487c88b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["511ab25f-7b4a-4a1e-a354-75157a383bc0"]
+  }],
+  "urls": ["http://www.pontoslivelo.com.br/"],
+  "plugins": []
+}

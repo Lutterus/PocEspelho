@@ -3,10 +3,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,9 +21,15 @@ public class Main {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "C:\\Projects\\pocEspelho\\pocEspelho\\fonte\\chromedriver.exe");
-		driver = new ChromeDriver();
+		driver = null;
+		ChromeOptions chromeoptions = new ChromeOptions();
+		//chromeoptions.addExtensions(new File("C:\\Projects\\pocEspelho\\pocEspelho\\fonte\\Selenium-IDE_v3.3.0.crx"));
+		//use brower with user options
+		chromeoptions.addArguments("user-data-dir=C:\\Users\\jfbit\\AppData\\Local\\Google\\Chrome\\User Data");
+		DesiredCapabilities desiredCapabilities = DesiredCapabilities.chrome();
+		desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeoptions);
+		driver = new ChromeDriver(desiredCapabilities);
 		driver.manage().window().maximize();
-
 		try {
 			BufferedReader reader = new BufferedReader(
 					new FileReader("C:\\Projects\\pocEspelho\\pocEspelho\\fonte\\statsTest.txt"));
@@ -86,6 +95,8 @@ public class Main {
 				WebDriverWait wait = new WebDriverWait(driver, waitTime);
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
 				driver.findElement(By.id(id)).sendKeys(login);
+				//WebElement name=driver.findElement(By.id(id));
+				//((JavascriptExecutor)driver).executeAsyncScript("arguments[0].value='admin'",name); 
 			}else {
 				WebDriverWait wait = new WebDriverWait(driver, waitTime);
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));

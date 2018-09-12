@@ -13,11 +13,25 @@ public class Main {
 	private static ArrayList<String> login = new ArrayList<String>();
 	private static ArrayList<String> senha = new ArrayList<String>();
 	private static String result = "";
-	private static String caminho = "C:\\Projects\\pocEspelho\\pocEspelho\\fonte\\azul.side";
+	private static String caminho = "C:\\Projects\\pocEspelho\\pocEspelho\\fonte\\aa.side";
 	private static Writer w;
 
 	public static void main(String[] args) {
-		
+		// livelo
+		login.add("");
+		senha.add("");
+		// smiles
+		login.add("");
+		senha.add("");
+		// amigo
+		login.add("");
+		senha.add("");
+		// azul
+		login.add("");
+		senha.add("");
+		// multiplus
+		login.add("");
+		senha.add("");
 		try {
 			File statText = new File("C:\\Projects\\pocEspelho\\pocEspelho\\fonte\\statsTest.txt");
 			FileOutputStream is = new FileOutputStream(statText);
@@ -36,7 +50,7 @@ public class Main {
 		String aux = s;
 		aux.replace(".", "");
 		aux.replace("-", "");
-		aux = s.replaceAll("[^a-zA-Z0-9]+","");
+		aux = s.replaceAll("[^a-zA-Z0-9]+", "");
 		for (String string : login) {
 			if (string.contentEquals(aux)) {
 				return "LOGIN";
@@ -59,7 +73,7 @@ public class Main {
 
 		w.write(id);
 		((BufferedWriter) w).newLine();
-		
+
 		w.write(idXpath);
 		((BufferedWriter) w).newLine();
 
@@ -103,7 +117,7 @@ public class Main {
 
 		w.write(id);
 		((BufferedWriter) w).newLine();
-		
+
 		w.write(xpath);
 		((BufferedWriter) w).newLine();
 	}
@@ -113,8 +127,7 @@ public class Main {
 		String value;
 		String idXpath;
 		try {
-			BufferedReader reader = new BufferedReader(
-					new FileReader(caminho));
+			BufferedReader reader = new BufferedReader(new FileReader(caminho));
 			String line;
 			while ((line = reader.readLine()) != null) {
 				System.out.println("linha: " + line);
@@ -129,15 +142,16 @@ public class Main {
 					line = reader.readLine();
 					System.out.println("linha: " + line);
 					int statIndex = 0;
-					int endIndex = 0;;
-					if(line.contains("id=")) {
+					int endIndex = 0;
+					;
+					if (line.contains("id=")) {
 						statIndex = line.indexOf("id=") + 3;
 						endIndex = line.indexOf(",") - 1;
-					}else {
+					} else {
 						statIndex = line.indexOf("\"target\": \"") + 11;
 						endIndex = line.indexOf(",") - 1;
 					}
-					
+
 					id = line.substring(statIndex, endIndex);
 					for (int j = 0; j < 10; j++) {
 						if (line.contains("xpath:position")) {
@@ -157,11 +171,12 @@ public class Main {
 					line = reader.readLine();
 					System.out.println("linha: " + line);
 					int statIndex = 0;
-					int endIndex = 0;;
-					if(line.contains("id=")) {
+					int endIndex = 0;
+					;
+					if (line.contains("id=")) {
 						statIndex = line.indexOf("id=") + 3;
 						endIndex = line.indexOf(",") - 1;
-					}else {
+					} else {
 						statIndex = line.indexOf("\"target\": \"") + 11;
 						endIndex = line.indexOf(",") - 1;
 					}
@@ -200,15 +215,16 @@ public class Main {
 					line = reader.readLine();
 					System.out.println("linha: " + line);
 					int statIndex = 0;
-					int endIndex = 0;;
-					if(line.contains("id=")) {
+					int endIndex = 0;
+					;
+					if (line.contains("id=")) {
 						statIndex = line.indexOf("id=") + 3;
 						endIndex = line.indexOf(",") - 1;
-					}else {
+					} else {
 						statIndex = line.indexOf("\"target\": \"") + 11;
 						endIndex = line.indexOf(",") - 1;
 					}
-					
+
 					id = line.substring(statIndex, endIndex);
 					for (int j = 0; j < 10; j++) {
 						if (line.contains("xpath:position")) {

@@ -10,14 +10,14 @@ public class Main {
 		try {
 			System.setProperty("webdriver.chrome.driver", "C:\\Projects\\pocEspelho\\pocEspelho\\fonte\\chromedriver.exe");
 			WebDriver driver = null;
-			driver = null;
 			ChromeOptions chromeoptions = new ChromeOptions();
-			chromeoptions.addExtensions(new File("C:\\Projects\\pocEspelho\\pocEspelho\\fonte\\Selenium-IDE_v3.3.0.crx"));
+			//chromeoptions.addExtensions(new File("C:\\Projects\\pocEspelho\\pocEspelho\\fonte\\Selenium-IDE_v3.3.0.crx"));
 			//use brower with user options
-			chromeoptions.addArguments("user-data-dir=C:\\Users\\jfbit\\AppData\\Local\\Google\\Chrome\\User Data");
+			//chromeoptions.addArguments("user-data-dir=C:\\Users\\jfbit\\AppData\\Local\\Google\\Chrome\\User Data");
 			DesiredCapabilities desiredCapabilities = DesiredCapabilities.chrome();
 			desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeoptions);
 			driver = new ChromeDriver(desiredCapabilities);
+			
 			
 			int a=1;
 			while(a==0) {
